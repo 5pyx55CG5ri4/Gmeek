@@ -1,3 +1,21 @@
+            <!-- 音乐播放器 -->
+             <div class="player">
+                <!-- 歌曲封面 -->
+                <div class="cover">
+                    <img src="https://github.com/5pyx55CG5ri4/5pyx55CG5ri4.github.io/assets/50692323/4e41eb5f-454d-4b6b-bddb-38d3de890b49" alt="">
+                </div>
+                <!-- 歌词设置 -->
+                <div class="song">
+                    <h2>Head  in the clouds</h2>
+                    <p>
+                       她最爱的歌
+                    </p>
+                </div>
+                <!-- audio标签 -->
+                <div class="mus">
+                    <audio src="https://github.com/5pyx55CG5ri4/5pyx55CG5ri4.github.io/assets/50692323/e002b7aa-e9e5-464e-a461-0d3f3506db1e" controls></audio>
+                </div>
+            </div>
 <p>
 {%- if blogBase['filingNum']!='' -%}
 <a href="https://beian.miit.gov.cn/" target="_blank">{{ blogBase['filingNum'] }}</a>
@@ -16,4 +34,75 @@ if("{{ blogBase['startSite'] }}"!=""){
     else{document.getElementById("runday").innerHTML="{{ i18n['run'] }}"+diffDay+"{{ i18n['days'] }}";}
 }
 </script>
-
+<style
+/* 定义整个播放器的样式 */
+.player {
+    margin-top: 50px; /* 距离上方50px */
+    height: 350px; /* 高度为350px */
+    width: 800px; /* 宽度为800px */
+    background-color: rgba(216, 218, 221, 0.5); /* 背景颜色为rgba(216, 218, 221, 0.5) */
+    border-radius: 10px; /* 边框半径为10px */
+}
+ 
+/* 定义封面的样式 */
+.player .cover {
+    display: inline-block; /* 内部元素呈现为块级元素 */
+    height: 250px; /* 高度为250px */
+    width: 250px; /* 宽度为250px */
+    margin-left: 30px; /* 距离左侧30px */
+    margin-top: 30px; /* 距离上方30px */
+    overflow: hidden; /* 溢出部分隐藏 */
+    border-radius: 10px; /* 边框半径为10px */
+}
+ 
+/* 定义歌曲信息的样式 */
+.song {
+    position: absolute; /* 绝对定位 */
+    margin-left: 50px; /* 距离左侧50px */
+    margin-top: 20px; /* 距离上方20px */
+    left: 250px; /* 左侧距离为250px */
+    top: 150px; /* 上方距离为150px */
+    height: 250px; /* 高度为250px */
+    width: 400px; /* 宽度为400px */
+    overflow: auto; /* 溢出部分自动滚动 */
+}
+ 
+/* 隐藏滚动条 */
+div::-webkit-scrollbar {
+    display: none;
+}
+ 
+/* 定义p标签的字体样式 */
+.song p {
+    font-family: "楷体";
+    margin: 5px; /* 上下左右各留出5px的间距 */
+}
+ 
+/* 定义h2标签的字体样式 */
+.song h2 {
+    font-family: "楷体";
+}
+ 
+/* 设置音频样式 */
+audio {
+    width: 100%; /* 宽度为100% */
+    height: 50px; /* 高度为50px */
+    border-radius: 10px; /* 边框半径为10px */
+}
+ 
+/* 设置音频播放进度条的颜色 */
+audio::-webkit-media-controls-progress-bar {
+    background-color: #000;
+}
+ 
+/* 定义播放器的背景颜色 */
+.player {
+    /* background: linear-gradient(to bottom, #304352, #d7d2cc); */
+    background-color: rgba(238, 238, 238, 0.2); /* 背景颜色为rgba(238, 238, 238, 0.2) */
+}
+ 
+/* 隐藏音频播放器的背景颜色 */
+audio::-webkit-media-controls-enclosure {
+    background-color: rgba(216, 218, 221, 0.0);
+}
+</style>
