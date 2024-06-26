@@ -3,7 +3,9 @@ Copyright © <span id="year"></span><a href="{{ blogBase['homeUrl'] }}"> {{ blog
 {%- if blogBase['filingNum']!='' -%}
 <a href="https://beian.miit.gov.cn/" target="_blank">{{ blogBase['filingNum'] }}</a>
 {%- endif %}
-<span id="runday"></span> 💖你就像💖生命 PS:Thanks Gmeek
+<span id="runday"></span>
+<span>💖你就像💖生命</span></br>
+<span>Thanks Gmeek</span>
 </p>
 
 <script>
@@ -13,8 +15,8 @@ if("{{ blogBase['startSite'] }}"!=""){
     var diff=now.getTime()-startSite.getTime();
     var diffDay=Math.floor(diff/(1000*60*60*24));
     document.getElementById("year").innerHTML=now.getFullYear();
-    if("{{ blogBase['filingNum'] }}"!=""){document.getElementById("runday").innerHTML=" • "+"{{ i18n['run'] }}"+diffDay+"{{ i18n['days'] }}"+" • ";}
-    else{document.getElementById("runday").innerHTML="{{ i18n['run'] }}"+diffDay+"{{ i18n['days'] }}"+" • ";}
+    if("{{ blogBase['filingNum'] }}"!=""){document.getElementById("runday").innerHTML=" • "+"{{ i18n['run'] }}"+diffDay+"{{ i18n['days'] }}";}
+    else{document.getElementById("runday").innerHTML="{{ i18n['run'] }}"+diffDay+"{{ i18n['days'] }}";}
 }
 </script>
 
