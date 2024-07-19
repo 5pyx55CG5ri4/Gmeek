@@ -59,15 +59,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">{% block header %}{% endblock %}</div>
-    <div style="
-    margin-bottom: 20px;
-    margin-left: 5px;
-    color: #999;
-    font-size: 14px;
-    box-sizing: border-box;
-"><sapn style="
-    color: #999;
-">{{blogBase['createdDate'] }} by 5pyx55CG5ri4</sapn> </div>
     <div id="content">{% block content %}{% endblock %}</div>
     <div id="footer">{% include 'footer.html' %}</div>
     <button onclick="topFunction()" id="backToTop" title="回到顶部">↑</button>
