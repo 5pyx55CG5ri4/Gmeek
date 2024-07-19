@@ -53,6 +53,8 @@
 
 </div>
 {% endblock %}
+
+{% block content %}
 <div style="
     margin-bottom: 20px;
     margin-left: 5px;
@@ -62,7 +64,6 @@
 "><sapn style="
     color: #999;
 ">{{blogBase['createdDate'] }} by 5pyx55CG5ri4</sapn> </div>
-{% block content %}
 <div class="markdown-body" id="postBody">{{ blogBase['postBody'] }}</div>
 <div style="font-size:small;margin-top:8px;float:right;">
    {{ blogBase['bottomText'] }}
