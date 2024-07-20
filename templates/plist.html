@@ -80,7 +80,6 @@
 {% endblock %}
 
 {% block content %}
-本文总阅读量<span id="busuanzi_value_page_pv"></span>次 <br>
 <div style="margin-bottom: 16px;">{{ blogBase['subTitle'] }}</div>
 <nav class="SideNav border">
     {% for num in postListJson -%}
@@ -121,8 +120,7 @@
 {% endblock %}
 
 {% block script %}
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
+
 <script>
     document.getElementById("pathSearch").setAttribute("d",IconList["search"]);
     document.getElementById("pathRSS").setAttribute("d",IconList["rss"]);
