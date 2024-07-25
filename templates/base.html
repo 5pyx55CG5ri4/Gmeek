@@ -20,40 +20,7 @@
 body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
 #header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
 #footer {margin-top:64px; text-align: center;font-size: small;}
-/* 样式，用于固定按钮位置 */
-    #backToTop {
-      width: 32px;
-      height: 32px;
-      border-radius:10px;
-      display: none; /* 默认隐藏 */
-      position: fixed; /* 固定在屏幕上 */
-      bottom: 10px; /* 距离底部20px */
-      right: 10px; /* 距离右侧20px */
-      z-index: 99; /* 置于最前 */
-      border: none; /* 无边框 */
-      outline: none; /* 无轮廓 */
-      background-color: #c1c1c1; /* 按钮背景色 */
-      color: white; /* 按钮文字颜色 */
-      cursor: pointer; /* 鼠标指针样式 */
-      padding: 15px; /* 内边距 */
-      text-indent:-9999px
-    }
 
-    #backToTop:hover {
-      background-color: #555; /* 鼠标悬停背景色 */
-    }
-    #backToTop:before {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -12px;
-      margin-left: -8px;
-      width: 0;
-      height: 0;
-      border: 8px solid transparent;
-      content: '';
-      border-bottom-color: #fff;
-    }
 </style>
 {% block style %}{% endblock %}
 
@@ -61,7 +28,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="header">{% block header %}{% endblock %}</div>
     <div id="content">{% block content %}{% endblock %}</div>
     <div id="footer">{% include 'footer.html' %}</div>
-    <button onclick="topFunction()" id="backToTop" title="回到顶部">↑</button>
 </body>
 <script>
 var IconList={{ IconList }};
@@ -93,24 +59,7 @@ function utterancesTheme(theme){
 }
 if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
 {%- endif %}
-// 获取按钮
-  var mybutton = document.getElementById("backToTop");
 
-  // 当用户向下滚动20px时，显示按钮
-  window.onscroll = function() {scrollFunction()};
-
-  function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-      mybutton.style.display = "block";
-    } else {
-      mybutton.style.display = "none";
-    }
-  }
-// 点击按钮时，滚动到顶部
-  function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }    
 console.log("ZLY Love DY Forever and ever");
 </script>
 {% block script %}{% endblock %}
